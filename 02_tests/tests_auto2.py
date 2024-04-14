@@ -6,7 +6,7 @@ class MySecondTestCase2(unittest.TestCase):
     
     def test_main(self):
         wynik = addition(3, 2)
-        self.assertEqual(wynik, 5)
+        self.assertEqual(wynik, 4)
 
 def addition(*args):
     return sum(args)
