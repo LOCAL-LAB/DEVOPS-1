@@ -19,7 +19,10 @@ class SearchProductTest(unittest.TestCase):
         search_box.send_keys("two cities")
         search_button = driver.find_element(By.CLASS_NAME,'search-button')
         search_button.click()
-        driver.save_screenshot("zdjecie1.png")
+        driver.save_screenshot("zdjecie2.png")
     
     def tearDown(self):
         self.driver.quit()
+
+if __name__ == "__main__":
+    unittest.main()
