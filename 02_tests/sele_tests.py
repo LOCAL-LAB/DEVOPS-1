@@ -1,13 +1,8 @@
 import unittest
-import time
-import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.options import Options
+
 
 class SearchProductTest(unittest.TestCase):
     def setUp(self):
@@ -24,7 +19,7 @@ class SearchProductTest(unittest.TestCase):
         search_box.send_keys("two cities")
         search_button = driver.find_element(By.CLASS_NAME,'search-button')
         search_button.click()
-        take_screenshot(driver,"zdjecie1.png")
+        driver.save_screenshot("zdjecie1.png")
     
     def tearDown(self):
         self.driver.quit()
