@@ -24,6 +24,7 @@ class TestDefaultSuite():
     self.driver.find_element(By.NAME, "q").send_keys("devops")
     self.driver.find_element(By.NAME, "q").send_keys(Keys.ENTER)
     self.driver.find_element(By.LINK_TEXT, "Devops - Kubernetes, AWS, Terraform").click()
+    self.driver.save_screenshot("plik.jpg")
     self.driver.find_element(By.CSS_SELECTOR, ".lp-zapisz-btn > a").click()
-    # self.driver.find_element(By.XPATH("/html/body/div[3]/div[1]/div/div[2]/div[2]")).click()
-  
+    #self.driver.find_element(By.XPATH("/html/body/div[3]/div[1]/div/div[2]/div[2]")).click()
+
